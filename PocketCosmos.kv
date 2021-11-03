@@ -1,12 +1,48 @@
 #:kivy 2.0.0
-<PocketCosmosFloatLayout>:
-    
+WindowManager:
+    MainScreen:
+    PlayScreen:
+    OptionsScreen:
+    SavegameScreen:
+    CreditsScreen:
+
+
+<MainScreen>
+    name: "main"
     FloatLayout:
-        orientation: "vertical"
-              
-
-
-    Image:
-        source: "img/background.png"
-        size: self.width, self.height
-        #size_hint: None, None
+        Button:
+            text: ""
+            on_release:
+        Button:
+            text: ""
+            on_release:
+<PlayScreen>
+    name: "play"
+    FloatLayout:
+        Button:
+            text: ""
+            on_release:
+        Button:
+            text: ""
+            on_release:
+<OptionsScreen>
+    name: "main"
+    FloatLayout:
+        Button:
+            text: ""
+            on_release:
+<SavegameScreen>
+    name: "main"
+    FloatLayout:
+        Button:
+            text: ""
+            on_release:    
+        Button:
+            text: ""
+            on_release:            
+<CreditsScreen>
+    name: "main"
+    FloatLayout:
+        Button:
+            text: "back to menu"
+            on_release:    
