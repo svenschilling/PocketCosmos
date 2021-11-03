@@ -6,12 +6,17 @@ WindowManager:
     SavegameScreen:
     CreditsScreen:
 
-
 <MainScreen>
     name: "main"
     FloatLayout:
+        orientation: "horizontal"
+        size: root.width, root.height
+        Image:
+            source: 'img/background.png'
+            size: self.texture_size
         Button:
-            text: ""
+            text: "main"
+            font_size: 30
             on_release:
         Button:
             text: ""
@@ -19,30 +24,44 @@ WindowManager:
 <PlayScreen>
     name: "play"
     FloatLayout:
+        orientation: "horizontal"
+        size: root.width, root.height
         Button:
-            text: ""
+            text: "play"
+            font_size: 30
             on_release:
         Button:
             text: ""
+            font_size: 30
             on_release:
 <OptionsScreen>
-    name: "main"
+    name: "options"
     FloatLayout:
+        orientation: "horizontal"
+        size: root.width, root.height
         Button:
-            text: ""
+            text: "options"
+            font_size: 30
             on_release:
 <SavegameScreen>
-    name: "main"
+    name: "savegame"
     FloatLayout:
+        orientation: "horizontal"
+        size: root.width, root.height
         Button:
-            text: ""
+            text: "save"
+            font_size: 30
             on_release:    
         Button:
             text: ""
+            font_size: 30
             on_release:            
 <CreditsScreen>
-    name: "main"
+    name: "credits"
     FloatLayout:
+        orientation: "horizontal"
+        size: root.width, root.height
         Button:
-            text: "back to menu"
+            text: "credits"
+            font_size: 30
             on_release:    

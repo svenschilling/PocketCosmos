@@ -8,8 +8,7 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.widget import Widget
 from kivy.uix.screenmanager import ScreenManager, Screen
 
-# load that kv file
-Builder.load_file('PocketCosmos.kv')
+
 
 # define screens
 class WindowManager(ScreenManager):
@@ -33,10 +32,12 @@ class SavegameScreen(Screen):
 class CreditsScreen(Screen):
     pass
 
+# load that kv file
+kv = Builder.load_file('PocketCosmos.kv')
 
 class PocketCosmosApp(App):
     def build(self):
-        return WindowManager(ScreenManager)
+        return kv
     
 
 PocketCosmosApp().run()
