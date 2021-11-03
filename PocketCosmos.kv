@@ -10,17 +10,20 @@ WindowManager:
     name: "main"
     FloatLayout:
         orientation: "horizontal"
-        size: root.width, root.height
+        #size: root.width, root.height
+        Label:
+            id: "background"
+            text: "maintest"
         Image:
             source: 'img/background.png'
             size: self.texture_size
         Button:
             text: "main"
             font_size: 30
+            size_hint: None, None
+            size: 100,40
             on_release:
-        Button:
-            text: ""
-            on_release:
+
 <PlayScreen>
     name: "play"
     FloatLayout:
@@ -30,10 +33,7 @@ WindowManager:
             text: "play"
             font_size: 30
             on_release:
-        Button:
-            text: ""
-            font_size: 30
-            on_release:
+
 <OptionsScreen>
     name: "options"
     FloatLayout:
@@ -52,10 +52,7 @@ WindowManager:
             text: "save"
             font_size: 30
             on_release:    
-        Button:
-            text: ""
-            font_size: 30
-            on_release:            
+           
 <CreditsScreen>
     name: "credits"
     FloatLayout:
