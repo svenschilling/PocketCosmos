@@ -8,17 +8,35 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.widget import Widget
 from kivy.uix.screenmanager import ScreenManager, Screen
 
+# load that kv file
+Builder.load_file('PocketCosmos.kv')
 
-
-class PocketCosmosFloatLayout(FloatLayout):
-    
-    def button_pressed(self):
-        print("you clicked it")
+# define screens
+class WindowManager(ScreenManager):
     pass
+
+class MainScreen(Screen):
+    pass
+
+class PlayScreen(Screen):
+    pass
+
+class PlayScreen(Screen):
+    pass
+
+class OptionsScreen(Screen):
+    pass
+
+class SavegameScreen(Screen):
+    pass
+
+class CreditsScreen(Screen):
+    pass
+
 
 class PocketCosmosApp(App):
     def build(self):
-        return PocketCosmosFloatLayout()
+        return WindowManager(ScreenManager)
     
 
 PocketCosmosApp().run()
