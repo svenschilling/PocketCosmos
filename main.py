@@ -15,6 +15,9 @@ class WindowManager(ScreenManager):
     pass
 
 class MainScreen(Screen):
+    
+    def play_game(self):
+        print("yo it works")
     pass
 
 class PlayScreen(Screen):

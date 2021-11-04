@@ -17,11 +17,10 @@ class AnimationFloatLayout(FloatLayout):
         print("you clicked it")
     
     def animate_it(self, widget, *args):
-        animate = Animation(
-            background_color=()
-
-
-        )
+        animate = Animation(background_color=(0,0,1,0))
+        animate.start(widget)    
+        print("pressed right now")
+        
 
 
     
