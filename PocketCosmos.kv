@@ -11,12 +11,11 @@ WindowManager:
     FloatLayout:
         orientation: "horizontal"
         #size: root.width, root.height
-        Label:
-            id: 'background'
-            text: "maintest"
         Image:
             source: 'img/background.png'
-            size: self.texture_size
+            size: 1920,1080
+            allow_stretch: True
+            keep_ratio: False
         Button:
             id: 'play_btn'
             text: "main"
