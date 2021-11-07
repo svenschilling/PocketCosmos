@@ -12,13 +12,20 @@ from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 
 # define screens
 class WindowManager(ScreenManager):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+    
     pass
 
 class MainScreen(Screen):
     
-    def play_game(self, instance):
-        print("yo it works")
-    pass
+    # change image according to its state || can i have dynamic id ?
+    def play_on(self, instance):
+        self.ids.play_img.source = ''
+    
+    def play_off(self, instance):
+        self.ids.play_img.source = ''
+    
 
 class PlayScreen(Screen):
     pass
@@ -117,7 +124,8 @@ class CreditsScreen(Screen):
             'https://github.com/svenschilling',
             '',
             '## Artists ##',
-            'sven --',
+            'sven -- layout, graphics --',
+            'https://www.artstation.com/svenschilling',
             '',
             'dude -- layout, graphics, music --',
             'https://www.instagram.com/ikone.official/',
@@ -125,14 +133,14 @@ class CreditsScreen(Screen):
             'rafikibeats -- music --',
             'https://soundcloud.com/rafikibeats',
             '',
-            '## Tester ##',
+            '## Testers ##',
             'McStorm',
             'mattis',
             'nichtpeter',
             'jean_borrow',
             'Peter Oswald',
             'Uedii',
-            'many many more people from FLAFLA',
+            'and many many more people from FLAFLA',
             '',
             '## Thanks to ##',
             'Everyone else i forgtot to mention'
