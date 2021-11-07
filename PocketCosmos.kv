@@ -9,21 +9,29 @@ WindowManager:
 <MainScreen>
     name: "main"
     FloatLayout:
+        
         orientation: "horizontal"
         
-        Image:
+        Image:        
             source: 'img/background.png'
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
+        
         Button:
             id: 'play_btn'
             text: "Play"
             font_size: 30
             size_hint: None, None
             size: 100,40
-            source: 'img/play_btn.png'
+            background_color: 0,0,0,0
             on_release: app.root.current = "play"
+            
+            Image:
+                id: 'play_img'
+                source: 'img/play_btn.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
                         
         Button:
             id: 'options_btn'
@@ -32,7 +40,15 @@ WindowManager:
             size_hint: None, None
             size: 100,40
             pos: 100,0
+            background_color: 0,0,0,0
             on_release: app.root.current = "options"
+
+            Image:
+                id: 'options_img'
+                source: 'img/play_btn.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
         Button:
             id: 'savegames_btn'
             text: "Savegames"
@@ -40,7 +56,15 @@ WindowManager:
             size_hint: None, None
             size: 100,40
             pos: 200,0
+            background_color: 0,0,0,0
             on_release: app.root.current = "savegame"
+
+            Image:
+                id: 'savegames_img'
+                source: 'img/play_btn.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        
         Button:
             id: 'credits_btn'
             text: "Credits"
@@ -48,23 +72,33 @@ WindowManager:
             size_hint: None, None
             size: 100,40
             pos: 300,0
+            background_color: 0,0,0,0
             on_release: app.root.current = "credits"
+
+            Image:
+                id: 'credits_img'
+                source: 'img/play_btn.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
 
 <PlayScreen>
     name: "play"
     FloatLayout:
         orientation: "horizontal"
         size: root.width, root.height
+        
         Image:
             source: 'img/background.png'
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
+
         Button:
             text: "mainmenu"
             font_size: 30
             size_hint: None, None
             size: 100,40
+            background_color: 0,0,0,0
             on_release: app.root.current = "main"
 
 <OptionsScreen>
@@ -82,6 +116,7 @@ WindowManager:
             font_size: 30
             size_hint: None, None
             size: 100,40
+            background_color: 0,0,0,0
             on_release: app.root.current = "main"
 <SavegameScreen>
     name: "savegame"
@@ -98,6 +133,7 @@ WindowManager:
             font_size: 30
             size_hint: None, None
             size: 100,40
+            background_color: 0,0,0,0
             on_release: app.root.current = "main"
            
 <CreditsScreen>
@@ -115,4 +151,5 @@ WindowManager:
             font_size: 30
             size_hint: None, None
             size: 100,40
+            background_color: 0,0,0,0
             on_release: app.root.current = "main"
