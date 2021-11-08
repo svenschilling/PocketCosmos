@@ -11,11 +11,13 @@ WindowManager:
     size_hint: None, None
     background_color: 0,0,0,0
 
+<FloatLayout>
+    orientation: "horizontal"
+    size: root.width, root.height
+
 <MainScreen>
     name: "main"
     FloatLayout:
-        
-        orientation: "horizontal"
         
         Image:        
             source: 'img/background.png'
@@ -38,7 +40,6 @@ WindowManager:
             id: 'options_btn' 
             size: 100,40
             pos: 100,0
-
             on_release: app.root.current = "options"
 
             Image:
@@ -73,10 +74,8 @@ WindowManager:
 
 <PlayScreen>
     name: "play"
-    FloatLayout:
-        orientation: "horizontal"
-        size: root.width, root.height
-        
+    FloatLayout: 
+           
         Image:
             source: 'img/background.png'
             size: 1920,1080
@@ -92,27 +91,28 @@ WindowManager:
 <OptionsScreen>
     name: "options"
     FloatLayout:
-        orientation: "horizontal"
-        size: root.width, root.height
+
         Image:
             source: 'img/background.png'
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
+
         Button:
             text: "options"
             size: 100,40
             on_release: app.root.current = "main"
+
 <SavegameScreen>
     name: "savegame"
     FloatLayout:
-        orientation: "horizontal"
-        size: root.width, root.height
+
         Image:
             source: 'img/background.png'
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
+
         Button:
             text: "save"
             size: 100,40
@@ -121,13 +121,13 @@ WindowManager:
 <CreditsScreen>
     name: "credits"
     FloatLayout:
-        orientation: "horizontal"
-        size: root.width, root.height
+
         Image:
             source: 'img/background.png'
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
+
         Button:
             text: "credits"
             size: 100,40
