@@ -6,6 +6,18 @@ WindowManager:
     SavegameScreen:
     CreditsScreen:
 
+<RoundedButton@Button>
+    background_color: 0,0,0,0
+    canvas:
+        Color:
+            rgba: [1, 0, 0, 1]
+    
+        RoundedRectangle:
+            size: self.size[0], self.size[1]
+            pos: self.pos
+            radius: dp(20)
+    
+
 <Button>
     font_size: 30
     size_hint: None, None
@@ -20,14 +32,25 @@ WindowManager:
     FloatLayout:
         
         Image:        
-            source: 'img/background.png'
+            source: 'img/background_main.png'
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
+            Image:
+                source: 'img/pocketcosmos.png'
+                #size: 1920,1080
+                allow_stretch: True
+                keep_ratio: True
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        
+                
+                
         
         Button:
             id: 'play_btn'
             size: 100,40
+            pos: 0,0
             on_release: app.root.current = "play"
             
             Image:
@@ -75,9 +98,9 @@ WindowManager:
 <PlayScreen>
     name: "play"
     FloatLayout: 
-           
+
         Image:
-            source: 'img/background.png'
+            source: 'img/background_play.png'
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
@@ -93,7 +116,7 @@ WindowManager:
     FloatLayout:
 
         Image:
-            source: 'img/background.png'
+            source: 'img/background_main.png'
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
@@ -108,7 +131,7 @@ WindowManager:
     FloatLayout:
 
         Image:
-            source: 'img/background.png'
+            source: 'img/background_main.png'
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
@@ -123,7 +146,7 @@ WindowManager:
     FloatLayout:
 
         Image:
-            source: 'img/background.png'
+            source: 'img/background_main.png'
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
