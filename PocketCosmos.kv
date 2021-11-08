@@ -6,6 +6,11 @@ WindowManager:
     SavegameScreen:
     CreditsScreen:
 
+<Button>
+    font_size: 30
+    size_hint: None, None
+    background_color: 0,0,0,0
+
 <MainScreen>
     name: "main"
     FloatLayout:
@@ -20,11 +25,7 @@ WindowManager:
         
         Button:
             id: 'play_btn'
-            
-            font_size: 30
-            size_hint: None, None
             size: 100,40
-            background_color: 0,0,0,0
             on_release: app.root.current = "play"
             
             Image:
@@ -34,13 +35,10 @@ WindowManager:
                 center_y: self.parent.center_y
                         
         Button:
-            id: 'options_btn'
-            
-            font_size: 30
-            size_hint: None, None
+            id: 'options_btn' 
             size: 100,40
             pos: 100,0
-            background_color: 0,0,0,0
+
             on_release: app.root.current = "options"
 
             Image:
@@ -51,12 +49,8 @@ WindowManager:
 
         Button:
             id: 'savegames_btn'
-            
-            font_size: 30
-            size_hint: None, None
             size: 100,40
             pos: 200,0
-            background_color: 0,0,0,0
             on_release: app.root.current = "savegame"
 
             Image:
@@ -67,12 +61,8 @@ WindowManager:
         
         Button:
             id: 'credits_btn'
-            
-            font_size: 30
-            size_hint: None, None
             size: 100,40
             pos: 300,0
-            background_color: 0,0,0,0
             on_release: app.root.current = "credits"
 
             Image:
@@ -95,10 +85,8 @@ WindowManager:
 
         Button:
             text: "mainmenu"
-            font_size: 30
             size_hint: None, None
             size: 100,40
-            background_color: 0,0,0,0
             on_release: app.root.current = "main"
 
 <OptionsScreen>
@@ -113,10 +101,7 @@ WindowManager:
             keep_ratio: False
         Button:
             text: "options"
-            font_size: 30
-            size_hint: None, None
             size: 100,40
-            background_color: 0,0,0,0
             on_release: app.root.current = "main"
 <SavegameScreen>
     name: "savegame"
@@ -130,10 +115,7 @@ WindowManager:
             keep_ratio: False
         Button:
             text: "save"
-            font_size: 30
-            size_hint: None, None
             size: 100,40
-            background_color: 0,0,0,0
             on_release: app.root.current = "main"
            
 <CreditsScreen>
@@ -148,8 +130,5 @@ WindowManager:
             keep_ratio: False
         Button:
             text: "credits"
-            font_size: 30
-            size_hint: None, None
             size: 100,40
-            background_color: 0,0,0,0
             on_release: app.root.current = "main"

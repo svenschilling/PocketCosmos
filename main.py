@@ -21,8 +21,8 @@ class MainScreen(Screen):
     
     # change image according to its state || can i have dynamic id ?
     def play_on(self, instance):
-        self.ids.play_img.source = ''
-    
+        #self.ids.play_img.source = ''
+        WindowManager.current = "play"
     def play_off(self, instance):
         self.ids.play_img.source = ''
     
