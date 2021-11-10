@@ -1,3 +1,4 @@
 - make hints for buttons !
 - look into FadeTransitions()
-- 
+-  loop sound only if press played 
+- window size 1920x1080 sets inner graphics wrong

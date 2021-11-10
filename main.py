@@ -1,15 +1,20 @@
 #           POCKETCOSMOS
 import kivy
+from kivy import config
 kivy.require('2.0.0')
 from kivy.app import App
 from kivy.lang import Builder
 
+from kivy.core.audio import SoundLoader
+from kivy.core.window import Window
+from kivy.config import Config
+
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.widget import Widget
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
-from kivy.core.audio import SoundLoader
 
 
+config.window_icon = 'media/icons/main.png'
 # define screens
 class WindowManager(ScreenManager):
     def __init__(self, **kwargs):
@@ -154,6 +159,9 @@ kv = Builder.load_file('PocketCosmos.kv')
 
 class PocketCosmosApp(App):
     def build(self):
+        Window.size = (800,600)
+        self.title = "Pocket Cosmos - Birth of a solar system"
+        self.icon = '/media/icons/main.png'
         return kv
     
 
