@@ -7,7 +7,7 @@ from kivy.lang import Builder
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.widget import Widget
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
-
+from kivy.core.audio import SoundLoader
 
 
 # define screens
@@ -28,6 +28,9 @@ class MainScreen(Screen):
     
 
 class PlayScreen(Screen):
+    snd = SoundLoader.load('media/sound/music/Beta1.ogg')
+    snd.loop = True
+    snd.play()
     pass
 
 class PlayScreen(Screen):
