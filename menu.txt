@@ -1,0 +1,28 @@
+game options || program options
+
+- game options -
+
+Gravity Engine - pulldown
+Ticks into the future - slider / number
+Tick History 
+Music Volume - slider / quick onoff
+Min. bodies multishot
+Max bodies multishot
+Show background - quick onoff
+Min. moon mass
+Min. planet mass
+Min. gasgiant mass
+Min. sun mass
+Min. big sun mass
+Min. giant sun mass
+Min. blackhole mass
+Moon density
+Planet density
+Gasgiant density
+Sun density
+Big sun density
+Giant sun density
+Blackhole density
+
+- progam options -
+

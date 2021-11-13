@@ -7,3 +7,6 @@
 - mb rework menu.png
 - rework pause_pressed.png -> needs a play symbol
 - right hand and left handed mode ! icons set on specific side then
+- transition from main to play like a warp ?! build it from main_ and- play_ background
+
+- x button hold for 3 sec asks for quitting the game when not in main menu , single lick goes one back
