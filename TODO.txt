@@ -2,3 +2,7 @@
 - look into FadeTransitions()
 -  loop sound only if press played 
 - window size 1920x1080 sets inner graphics wrong
+- rework timer_panel.png
+- rework sunmode.png
+- mb rework menu.png
+- rework pause_pressed.png -> needs a play symbol
