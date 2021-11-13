@@ -6,3 +6,4 @@
 - rework sunmode.png
 - mb rework menu.png
 - rework pause_pressed.png -> needs a play symbol
+- right hand and left handed mode ! icons set on specific side then
