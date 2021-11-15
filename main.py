@@ -32,7 +32,7 @@ class MainScreen(Screen):
 class PlayScreen(Screen):
     snd = SoundLoader.load('media/sound/music/Beta1.ogg')
     snd.loop = True
-    #snd.play()
+    snd.play()
     pass
 
 class OptionsScreen(Screen):
