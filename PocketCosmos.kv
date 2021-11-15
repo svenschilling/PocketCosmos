@@ -180,6 +180,12 @@ WindowManager:
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
+            Label:
+                
+                text: "im the stupid example text"
+                pos: self.parent.center_x, self.parent.center_y
+                halign: 'center'
+                valign: 'center'
 
         Button:
             on_release: app.root.current = "main"
