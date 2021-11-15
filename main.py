@@ -11,7 +11,7 @@ from kivy.config import Config
 
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.widget import Widget
-from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition, NoTransition
+from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 
 
 config.window_icon = 'media/icons/main.png'
@@ -26,7 +26,7 @@ class MainScreen(Screen):
         #self.ids.play_img.source = ''
         WindowManager.current = "play"
     def play_off(self, instance):
-        self.ids.play_img.source = ''
+        self.ids.play_img.source = 'media/buttons/play_pressed.png'
     
 
 class PlayScreen(Screen):
