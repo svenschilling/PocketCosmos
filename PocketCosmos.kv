@@ -13,7 +13,7 @@ WindowManager:
     background_color: 0,0,0,0
 <Label>
     font_size: 30
-<Image>
+<ImgButton@Image>
     center_x: self.parent.center_x
     center_y: self.parent.center_y 
 
@@ -43,7 +43,7 @@ WindowManager:
             
             on_release: app.root.current = "play"
             
-            Image:
+            ImgButton:
                 id: 'play_img'
                 source: 'media/buttons/play.png'
 
@@ -54,7 +54,7 @@ WindowManager:
 
             on_release: app.root.current = "savegame"
 
-            Image:
+            ImgButton:
                 id: 'savegames_img'
                 source: 'media/buttons/save.png'
 
@@ -65,7 +65,7 @@ WindowManager:
 
             on_release: app.root.current = "play"
                         
-            Image:
+            ImgButton:
                 id: 'load_img'
                 source: 'media/buttons/load.png'
                
@@ -76,7 +76,7 @@ WindowManager:
 
             on_release: app.root.current = "options"
 
-            Image:
+            ImgButton:
                 id: 'options_img'
                 source: 'media/buttons/options.png'
 
@@ -87,7 +87,7 @@ WindowManager:
 
             on_release: app.root.current = "credits"
 
-            Image:
+            ImgButton:
                 id: 'credits_img'
                 source: 'media/buttons/credits.png'
 
@@ -106,9 +106,10 @@ WindowManager:
         Button:
             id: 'add_planet'
             on_release: 
-            pos_hint: {'center_x': 0.1,'center_y': 0.9}
+            pos: 0.1,0.8
+            #pos_hint: {'center_x': 0.1,'center_y': 0.8}
             
-            Image:
+            ImgButton:
                 id: 'add_planet_img'
 
                 source: 'media/icons/add_planet.png'
@@ -119,7 +120,7 @@ WindowManager:
             on_release: app.root.current = "main"
             pos_hint: {'center_x': 0.1,'center_y': 0.08}
             
-            Image:
+            ImgButton:
                 id: 'menu_img'
                 source: 'media/icons/menu.png'
 
@@ -128,7 +129,7 @@ WindowManager:
             id: 'multipass'
             on_release: 
             pos_hint: {'center_x': 0.1,'center_y': 0.08}
-            Image:
+            ImgButton:
                 id: 'multipass_img'
                 source: 'media/icons/multipass.png'
 
@@ -137,7 +138,7 @@ WindowManager:
             id: 'pause'
             on_release: 
             pos_hint: {'center_x': 0.1,'center_y': 0.08}
-            Image:
+            ImgButton:
                 id: 'pause_img'
                 source: 'media/icons/pause.png'
 
@@ -146,7 +147,7 @@ WindowManager:
             id: 'reset'
             on_release: 
             pos_hint: {'center_x': 0.1,'center_y': 0.08}
-            Image:
+            ImgButton:
                 id: 'reset_img'
                 source: 'media/icons/reset.png'
 
@@ -155,7 +156,7 @@ WindowManager:
             id: 'show_orbit'
             on_release: 
             pos_hint: {'center_x': 0.1,'center_y': 0.08}
-            Image:
+            ImgButton:
                 id: 'show_orbit_img'
                 source: 'media/icons/show_orbit.png'
 
@@ -164,7 +165,7 @@ WindowManager:
             id: 'sunmode'
             on_release: 
             pos_hint: {'center_x': 0.1,'center_y': 0.08}
-            Image:
+            ImgButton:
                 id: 'sunmode_img'
                 source: 'media/icons/sunmode.png'
 
@@ -173,7 +174,7 @@ WindowManager:
             id: 'timer'
             on_release: 
             pos_hint: {'center_x': 0.1,'center_y': 0.08}
-            Image:
+            ImgButton:
                 id: 'timer_img'
                 source: 'media/icons/timer.png'
 
@@ -182,7 +183,7 @@ WindowManager:
             id: 'close'
             on_release: 
             pos_hint: {'center_x': 0.1,'center_y': 0.08}
-            Image:
+            ImgButton:
                 id: 'close_img'
                 source: 'media/icons/close.png'
 
@@ -200,7 +201,7 @@ WindowManager:
         Button:
             on_release: app.root.current = "main"
             pos: 0,0
-            Image:
+            ImgButton:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
 
@@ -218,7 +219,7 @@ WindowManager:
         Button:
             on_release: app.root.current = "main"
             pos: 0,0
-            Image:
+            ImgButton:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
 
@@ -235,7 +236,7 @@ WindowManager:
         Button:
             on_release: app.root.current = "main"
             pos: 0,0
-            Image:
+            ImgButton:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
               
@@ -259,7 +260,7 @@ WindowManager:
         Button:
             on_release: app.root.current = "main"
             pos: 0,0
-            Image:
+            ImgButton:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
 
