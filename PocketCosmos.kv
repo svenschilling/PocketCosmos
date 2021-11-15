@@ -1,22 +1,12 @@
 #:kivy 2.0.0
 WindowManager:
+    
     MainScreen:
     PlayScreen:
     OptionsScreen:
     SavegameScreen:
-    CreditsScreen:
-
-<RoundedButton@Button>
-    background_color: 0,0,0,0
-    canvas:
-        Color:
-            rgba: [1, 0, 0, 1]
-    
-        RoundedRectangle:
-            size: self.size[0], self.size[1]
-            pos: self.pos
-            radius: dp(20)
-    
+    LoadgameScreen:
+    CreditsScreen:    
 
 <Button>
     font_size: 30
@@ -42,15 +32,12 @@ WindowManager:
                 allow_stretch: True
                 keep_ratio: True
                 center_x: self.parent.center_x
-                center_y: self.parent.center_y
-        
-                
-                
+                center_y: self.parent.center_y                        
         
         Button:
             id: 'play_btn'
-            size: 100,40
-            pos: 0,0
+            pos_hint: {'center_x': 0.2,'center_y': 0.08}
+            
             on_release: app.root.current = "play"
             
             Image:
@@ -59,10 +46,36 @@ WindowManager:
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
                         
+
+
+        Button:
+            id: 'savegames_btn'
+            pos_hint: {'center_x': 0.3,'center_y': 0.08}
+
+            on_release: app.root.current = "savegame"
+
+            Image:
+                id: 'savegames_img'
+                source: 'media/buttons/save.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        Button:
+            id: 'load_btn'
+            pos_hint: {'center_x': 0.4,'center_y': 0.08}
+
+            on_release: app.root.current = "play"
+                        
+            Image:
+                id: 'load_img'
+                source: 'media/buttons/load.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y                
+
         Button:
             id: 'options_btn' 
-            size: 100,40
-            pos: 100,0
+            pos_hint: {'center_x': 0.5,'center_y': 0.08}
+
             on_release: app.root.current = "options"
 
             Image:
@@ -72,21 +85,9 @@ WindowManager:
                 center_y: self.parent.center_y
 
         Button:
-            id: 'savegames_btn'
-            size: 100,40
-            pos: 200,0
-            on_release: app.root.current = "savegame"
-
-            Image:
-                id: 'savegames_img'
-                source: 'media/buttons/save.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
-        
-        Button:
             id: 'credits_btn'
-            size: 100,40
-            pos: 300,0
+            pos_hint: {'center_x': 0.6,'center_y': 0.08}
+
             on_release: app.root.current = "credits"
 
             Image:
@@ -106,10 +107,13 @@ WindowManager:
             keep_ratio: False
 
         Button:
-            text: "mainmenu"
-            size_hint: None, None
-            size: 100,40
             on_release: app.root.current = "main"
+            pos: 0,0
+            Image:
+                id: 'back_img'
+                source: 'media/buttons/back.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
 
 <OptionsScreen>
     name: "options"
@@ -122,9 +126,13 @@ WindowManager:
             keep_ratio: False
 
         Button:
-            text: "options"
-            size: 100,40
             on_release: app.root.current = "main"
+            pos: 0,0
+            Image:
+                id: 'back_img'
+                source: 'media/buttons/back.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
 
 <SavegameScreen>
     name: "savegame"
@@ -137,9 +145,31 @@ WindowManager:
             keep_ratio: False
 
         Button:
-            text: "save"
-            size: 100,40
             on_release: app.root.current = "main"
+            pos: 0,0
+            Image:
+                id: 'back_img'
+                source: 'media/buttons/back.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+<LoadgameScreen>
+    name: "loadgame"
+    FloatLayout:
+
+        Image:
+            source: 'media/background/background_main.png'
+            size: 1920,1080
+            allow_stretch: True
+            keep_ratio: False
+
+        Button:
+            on_release: app.root.current = "main"
+            pos: 0,0
+            Image:
+                id: 'back_img'
+                source: 'media/buttons/back.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y                
            
 <CreditsScreen>
     name: "credits"
@@ -152,6 +182,10 @@ WindowManager:
             keep_ratio: False
 
         Button:
-            text: "credits"
-            size: 100,40
             on_release: app.root.current = "main"
+            pos: 0,0
+            Image:
+                id: 'back_img'
+                source: 'media/buttons/back.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y

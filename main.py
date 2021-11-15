@@ -11,19 +11,16 @@ from kivy.config import Config
 
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.widget import Widget
-from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
+from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition, NoTransition
 
 
 config.window_icon = 'media/icons/main.png'
+
 # define screens
 class WindowManager(ScreenManager):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-    
     pass
 
 class MainScreen(Screen):
-    
     # change image according to its state || can i have dynamic id ?
     def play_on(self, instance):
         #self.ids.play_img.source = ''
@@ -35,16 +32,16 @@ class MainScreen(Screen):
 class PlayScreen(Screen):
     snd = SoundLoader.load('media/sound/music/Beta1.ogg')
     snd.loop = True
-    snd.play()
-    pass
-
-class PlayScreen(Screen):
+    #snd.play()
     pass
 
 class OptionsScreen(Screen):
     pass
 
 class SavegameScreen(Screen):
+    pass
+
+class LoadgameScreen(Screen):
     pass
 
 class CreditsScreen(Screen):
@@ -159,10 +156,17 @@ kv = Builder.load_file('PocketCosmos.kv')
 
 class PocketCosmosApp(App):
     def build(self):
+        sm = ScreenManager(transition=FadeTransition())
+        sm.add_widget(MainScreen())
+        sm.add_widget(PlayScreen())
+        sm.add_widget(OptionsScreen())
+        sm.add_widget(SavegameScreen())
+        sm.add_widget(LoadgameScreen())
+        sm.add_widget(CreditsScreen())
         Window.size = (800,600)
         self.title = "Pocket Cosmos - Birth of a solar system"
         self.icon = '/media/icons/main.png'
-        return kv
+        return sm
     
 
 PocketCosmosApp().run()
