@@ -9,9 +9,13 @@ WindowManager:
     CreditsScreen:    
 
 <Button>
-    font_size: 30
     size_hint: None, None
     background_color: 0,0,0,0
+<Label>
+    font_size: 30
+<Image>
+    center_x: self.parent.center_x
+    center_y: self.parent.center_y 
 
 <FloatLayout>
     orientation: "horizontal"
@@ -31,8 +35,7 @@ WindowManager:
                 size: root.width, root.height
                 allow_stretch: True
                 keep_ratio: True
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y                        
+                                       
         
         Button:
             id: 'play_btn'
@@ -43,9 +46,6 @@ WindowManager:
             Image:
                 id: 'play_img'
                 source: 'media/buttons/play.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
-                        
 
 
         Button:
@@ -57,8 +57,7 @@ WindowManager:
             Image:
                 id: 'savegames_img'
                 source: 'media/buttons/save.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
+
 
         Button:
             id: 'load_btn'
@@ -69,8 +68,7 @@ WindowManager:
             Image:
                 id: 'load_img'
                 source: 'media/buttons/load.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y                
+               
 
         Button:
             id: 'options_btn' 
@@ -81,8 +79,7 @@ WindowManager:
             Image:
                 id: 'options_img'
                 source: 'media/buttons/options.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
+
 
         Button:
             id: 'credits_btn'
@@ -93,8 +90,7 @@ WindowManager:
             Image:
                 id: 'credits_img'
                 source: 'media/buttons/credits.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
+
 
 <PlayScreen>
     name: "play"
@@ -105,15 +101,91 @@ WindowManager:
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
+        
+        
+        Button:
+            id: 'add_planet'
+            on_release: 
+            pos_hint: {'center_x': 0.1,'center_y': 0.9}
+            
+            Image:
+                id: 'add_planet_img'
+
+                source: 'media/icons/add_planet.png'
+
+        
+        Button:
+            id: 'menu'
+            on_release: app.root.current = "main"
+            pos_hint: {'center_x': 0.1,'center_y': 0.08}
+            
+            Image:
+                id: 'menu_img'
+                source: 'media/icons/menu.png'
+
 
         Button:
-            on_release: app.root.current = "main"
-            pos: 0,0
+            id: 'multipass'
+            on_release: 
+            pos_hint: {'center_x': 0.1,'center_y': 0.08}
             Image:
-                id: 'back_img'
-                source: 'media/buttons/back.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
+                id: 'multipass_img'
+                source: 'media/icons/multipass.png'
+
+
+        Button:
+            id: 'pause'
+            on_release: 
+            pos_hint: {'center_x': 0.1,'center_y': 0.08}
+            Image:
+                id: 'pause_img'
+                source: 'media/icons/pause.png'
+
+
+        Button:
+            id: 'reset'
+            on_release: 
+            pos_hint: {'center_x': 0.1,'center_y': 0.08}
+            Image:
+                id: 'reset_img'
+                source: 'media/icons/reset.png'
+
+
+        Button:
+            id: 'show_orbit'
+            on_release: 
+            pos_hint: {'center_x': 0.1,'center_y': 0.08}
+            Image:
+                id: 'show_orbit_img'
+                source: 'media/icons/show_orbit.png'
+
+
+        Button:
+            id: 'sunmode'
+            on_release: 
+            pos_hint: {'center_x': 0.1,'center_y': 0.08}
+            Image:
+                id: 'sunmode_img'
+                source: 'media/icons/sunmode.png'
+
+
+        Button:
+            id: 'timer'
+            on_release: 
+            pos_hint: {'center_x': 0.1,'center_y': 0.08}
+            Image:
+                id: 'timer_img'
+                source: 'media/icons/timer.png'
+
+
+        Button:
+            id: 'close'
+            on_release: 
+            pos_hint: {'center_x': 0.1,'center_y': 0.08}
+            Image:
+                id: 'close_img'
+                source: 'media/icons/close.png'
+
 
 <OptionsScreen>
     name: "options"
@@ -131,8 +203,7 @@ WindowManager:
             Image:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
+
 
 <SavegameScreen>
     name: "savegame"
@@ -150,8 +221,7 @@ WindowManager:
             Image:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
+
 <LoadgameScreen>
     name: "loadgame"
     FloatLayout:
@@ -168,8 +238,7 @@ WindowManager:
             Image:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y                
+              
            
 <CreditsScreen>
     name: "credits"
@@ -193,5 +262,4 @@ WindowManager:
             Image:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
-                center_x: self.parent.center_x
-                center_y: self.parent.center_y
+

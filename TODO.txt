@@ -1,12 +1,14 @@
-- make hints for buttons !
-- look into FadeTransitions()
--  loop sound only if press played 
-- window size 1920x1080 sets inner graphics wrong
+# graphics
 - rework timer_panel.png
 - rework sunmode.png
 - mb rework menu.png
 - rework pause_pressed.png -> needs a play symbol
+# menu
 - right hand and left handed mode ! icons set on specific side then
+# play
+-  loop sound only if press played 
+# main
 - transition from main to play like a warp ?! build it from main_ and- play_ background
-
+# everywhere
 - x button hold for 3 sec asks for quitting the game when not in main menu , single lick goes one back
+- make hints for buttons !
