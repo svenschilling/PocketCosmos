@@ -164,7 +164,7 @@ class PocketCosmosApp(App):
         sm.add_widget(SavegameScreen())
         sm.add_widget(LoadgameScreen())
         sm.add_widget(CreditsScreen())
-        Window.size = (800,600)
+        Window.size = (1920,1080)
         self.title = "Pocket Cosmos - Birth of a solar system"
         self.icon = '/media/icons/main.png'
         return sm
