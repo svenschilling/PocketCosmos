@@ -116,38 +116,25 @@ WindowManager:
                 source: 'media/icons/add_planet.png'
 
         
-        Button:
-            id: 'menu'
-            on_release: app.root.current = "main"
-            pos_hint: {'center_x': 0.05,'center_y': 0.8125}
-            
-            ImgButton:
-                id: 'menu_img'
-                source: 'media/icons/menu.png'
+
 
 
         Button:
             id: 'multipass'
             on_release: 
-            pos_hint: {'center_x': 0.05,'center_y': 0.6375}
+            pos_hint: {'center_x': 0.05,'center_y': 0.8}
             ImgButton:
                 id: 'multipass_img'
                 source: 'media/icons/multipass.png'
 
 
-        Button:
-            id: 'pause'
-            on_release: 
-            pos_hint: {'center_x': 0.05,'center_y': 0.55}
-            ImgButton:
-                id: 'pause_img'
-                source: 'media/icons/pause.png'
+
 
 
         Button:
             id: 'reset'
             on_release: 
-            pos_hint: {'center_x': 0.05,'center_y': 0.4625}
+            pos_hint: {'center_x': 0.05,'center_y': 0.7}
             ImgButton:
                 id: 'reset_img'
                 source: 'media/icons/reset.png'
@@ -156,16 +143,16 @@ WindowManager:
         Button:
             id: 'show_orbit'
             on_release: 
-            pos_hint: {'center_x': 0.05,'center_y': 0.375}
+            pos_hint: {'center_x': 0.05,'center_y': 0.6}
             ImgButton:
                 id: 'show_orbit_img'
-                source: 'media/icons/show_orbit.png'
+                source: 'media/icons/showorbit.png'
 
 
         Button:
             id: 'sunmode'
             on_release: 
-            pos_hint: {'center_x': 0.05,'center_y': 0.2875}
+            pos_hint: {'center_x': 0.05,'center_y': 0.5}
             ImgButton:
                 id: 'sunmode_img'
                 source: 'media/icons/sunmode.png'
@@ -174,16 +161,32 @@ WindowManager:
         Button:
             id: 'timer'
             on_release: 
-            pos_hint: {'center_x': 0.05,'center_y': 0.2}
+            pos_hint: {'center_x': 0.05,'center_y': 0.4}
             ImgButton:
                 id: 'timer_img'
                 source: 'media/icons/timer.png'
 
+        Button:
+            id: 'pause'
+            on_release: 
+            pos_hint: {'center_x': 0.05,'center_y': 0.3}
+            ImgButton:
+                id: 'pause_img'
+                source: 'media/icons/pause.png'
+
+        Button:
+            id: 'menu'
+            on_release: app.root.current = "main"
+            pos_hint: {'center_x': 0.05,'center_y': 0.1}
+            
+            ImgButton:
+                id: 'menu_img'
+                source: 'media/icons/menu.png'
 
         Button:
             id: 'close'
             on_release: 
-            pos_hint: {'center_x': 0.9,'center_y': 0.9}
+            pos_hint: {'center_x': 0.95,'center_y': 0.9}
             ImgButton:
                 id: 'close_img'
                 source: 'media/icons/close.png'
