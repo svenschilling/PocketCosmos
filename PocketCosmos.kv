@@ -1,6 +1,5 @@
 #:kivy 2.0.0
-WindowManager:
-    
+WindowManager:    
     MainScreen:
     PlayScreen:
     OptionsScreen:
@@ -37,87 +36,65 @@ WindowManager:
                 size: root.width, root.height
                 allow_stretch: True
                 keep_ratio: True
-                                       
         
         Button:
             id: 'play_btn'
             pos_hint: {'center_x': 0.15,'center_y': 0.08}
-            
-            on_release: app.root.current = "play"
-            
+            on_release: app.root.current = "play"            
             ImgButton:
                 id: 'play_img'
                 source: 'media/buttons/play.png'
 
-
         Button:
             id: 'savegames_btn'
             pos_hint: {'center_x': 0.325,'center_y': 0.08}
-
             on_release: app.root.current = "savegame"
-
             ImgButton:
                 id: 'savegames_img'
                 source: 'media/buttons/save.png'
 
-
         Button:
             id: 'load_btn'
             pos_hint: {'center_x': 0.5,'center_y': 0.08}
-
-            on_release: app.root.current = "loadgame"
-                        
+            on_release: app.root.current = "loadgame"                        
             ImgButton:
                 id: 'load_img'
                 source: 'media/buttons/load.png'
                
-
         Button:
             id: 'options_btn' 
             pos_hint: {'center_x': 0.675,'center_y': 0.08}
-
             on_release: app.root.current = "options"
-
             ImgButton:
                 id: 'options_img'
                 source: 'media/buttons/options.png'
 
-
         Button:
             id: 'credits_btn'
             pos_hint: {'center_x': 0.85,'center_y': 0.08}
-
             on_release: app.root.current = "credits"
-
             ImgButton:
                 id: 'credits_img'
                 source: 'media/buttons/credits.png'
 
-
 <PlayScreen>
     name: "play"
+    
     FloatLayout: 
-
+        
         Image:
             source: 'media/background/background_play.png'
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
-        
-        
+              
         Button:
             id: 'add_planet'
             on_release: 
             pos_hint: {'center_x': 0.05,'center_y': 0.9}
-            
             ImgButton:
                 id: 'add_planet_img'
-
                 source: 'media/icons/add_planet.png'
-
-        
-
-
 
         Button:
             id: 'multipass'
@@ -127,10 +104,6 @@ WindowManager:
                 id: 'multipass_img'
                 source: 'media/icons/multipass.png'
 
-
-
-
-
         Button:
             id: 'reset'
             on_release: 
@@ -138,7 +111,6 @@ WindowManager:
             ImgButton:
                 id: 'reset_img'
                 source: 'media/icons/reset.png'
-
 
         Button:
             id: 'show_orbit'
@@ -148,7 +120,6 @@ WindowManager:
                 id: 'show_orbit_img'
                 source: 'media/icons/showorbit.png'
 
-
         Button:
             id: 'sunmode'
             on_release: 
@@ -156,7 +127,6 @@ WindowManager:
             ImgButton:
                 id: 'sunmode_img'
                 source: 'media/icons/sunmode.png'
-
 
         Button:
             id: 'timer'
@@ -178,7 +148,6 @@ WindowManager:
             id: 'menu'
             on_release: app.root.current = "main"
             pos_hint: {'center_x': 0.05,'center_y': 0.1}
-            
             ImgButton:
                 id: 'menu_img'
                 source: 'media/icons/menu.png'
@@ -190,7 +159,6 @@ WindowManager:
             ImgButton:
                 id: 'close_img'
                 source: 'media/icons/close.png'
-
 
 <OptionsScreen>
     name: "options"
@@ -204,10 +172,11 @@ WindowManager:
 
         Button:
             on_release: app.root.current = "main"
-            pos: 0,0
+            pos_hint: {'center_x': 0.15,'center_y': 0.08}
             ImgButton:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
+                
 
 
 <SavegameScreen>
@@ -222,14 +191,13 @@ WindowManager:
             Image:
                 source: 'media/background/savestate.png'
                 size: 774,88
-                allow_stretch: True
-                keep_ratio: False
+
                 size_hint: None, None
                 pos_hint: {'center_x': 0.5,'center_y': 0.9}
 
         Button:
             on_release: app.root.current = "main"
-            pos: 0,0
+            pos_hint: {'center_x': 0.15,'center_y': 0.08}
             ImgButton:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
@@ -246,14 +214,13 @@ WindowManager:
             Image:
                 source: 'media/background/loadstate.png'
                 size: 774,88
-                allow_stretch: True
-                keep_ratio: False
+
                 size_hint: None, None
                 pos_hint: {'center_x': 0.5,'center_y': 0.9}
 
         Button:
             on_release: app.root.current = "main"
-            pos: 0,0
+            pos_hint: {'center_x': 0.15,'center_y': 0.08}
             ImgButton:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
@@ -285,7 +252,7 @@ WindowManager:
 
         Button:
             on_release: app.root.current = "main"
-            pos: 0,0
+            pos_hint: {'center_x': 0.15,'center_y': 0.08}
             ImgButton:
                 id: 'back_img'
                 source: 'media/buttons/back.png'
