@@ -1,1 +1,263 @@
 #:kivy 2.0.0
+WindowManager:    
+    MainScreen:
+    PlayScreen:
+    OptionsScreen:
+    SavegameScreen:
+    LoadgameScreen:
+    CreditsScreen:    
+
+<Button>
+    size_hint: None, None
+    background_color: 0,0,0,0
+<Label>
+    font_size: 30
+<ImgButton@Image>
+    center_x: self.parent.center_x
+    center_y: self.parent.center_y 
+    size_hint: None, None
+    size: 243,99
+
+<FloatLayout>
+    orientation: "horizontal"
+    size: root.width, root.height
+
+<MainScreen>
+    name: "main"
+    FloatLayout:
+        
+        Image:        
+            source: 'media/background/background_main.png'
+            size: 1920,1080
+            allow_stretch: True
+            keep_ratio: False
+            Image:
+                source: 'media/background/pocketcosmos.png'
+                size: root.width, root.height
+                allow_stretch: True
+                keep_ratio: True
+        
+        Button:
+            id: 'play_btn'
+            pos_hint: {'center_x': 0.15,'center_y': 0.08}
+            on_release: app.root.current = "play"            
+            ImgButton:
+                id: 'play_img'
+                source: 'media/buttons/play.png'
+
+        Button:
+            id: 'savegames_btn'
+            pos_hint: {'center_x': 0.325,'center_y': 0.08}
+            on_release: app.root.current = "savegame"
+            ImgButton:
+                id: 'savegames_img'
+                source: 'media/buttons/save.png'
+
+        Button:
+            id: 'load_btn'
+            pos_hint: {'center_x': 0.5,'center_y': 0.08}
+            on_release: app.root.current = "loadgame"                        
+            ImgButton:
+                id: 'load_img'
+                source: 'media/buttons/load.png'
+               
+        Button:
+            id: 'options_btn' 
+            pos_hint: {'center_x': 0.675,'center_y': 0.08}
+            on_release: app.root.current = "options"
+            ImgButton:
+                id: 'options_img'
+                source: 'media/buttons/options.png'
+
+        Button:
+            id: 'credits_btn'
+            pos_hint: {'center_x': 0.85,'center_y': 0.08}
+            on_release: app.root.current = "credits"
+            ImgButton:
+                id: 'credits_img'
+                source: 'media/buttons/credits.png'
+
+<PlayScreen>
+    name: "play"
+    
+    FloatLayout: 
+        
+        Image:
+            source: 'media/background/background_play.png'
+            size: 1920,1080
+            allow_stretch: True
+            keep_ratio: False
+              
+        Button:
+            id: 'add_planet'
+            on_release: 
+            pos_hint: {'center_x': 0.95,'center_y': 0.9}
+            ImgButton:
+                id: 'add_planet_img'
+                source: 'media/icons/add_planet.png'
+
+        Button:
+            id: 'multipass'
+            on_release: 
+            pos_hint: {'center_x': 0.95,'center_y': 0.8}
+            ImgButton:
+                id: 'multipass_img'
+                source: 'media/icons/multipass.png'
+
+        Button:
+            id: 'reset'
+            on_release: 
+            pos_hint: {'center_x': 0.95,'center_y': 0.7}
+            ImgButton:
+                id: 'reset_img'
+                source: 'media/icons/reset.png'
+
+        Button:
+            id: 'show_orbit'
+            on_release: 
+            pos_hint: {'center_x': 0.95,'center_y': 0.6}
+            ImgButton:
+                id: 'show_orbit_img'
+                source: 'media/icons/showorbit.png'
+
+        Button:
+            id: 'sunmode'
+            on_release: 
+            pos_hint: {'center_x': 0.95,'center_y': 0.5}
+            ImgButton:
+                id: 'sunmode_img'
+                source: 'media/icons/sunmode.png'
+
+        Button:
+            id: 'timer'
+            on_release: 
+            pos_hint: {'center_x': 0.95,'center_y': 0.4}
+            ImgButton:
+                id: 'timer_img'
+                source: 'media/icons/timer.png'
+
+        Button:
+            id: 'pause'
+            on_release: 
+            pos_hint: {'center_x': 0.95,'center_y': 0.3}
+            ImgButton:
+                id: 'pause_img'
+                source: 'media/icons/pause.png'
+
+        Button:
+            id: 'menu'
+            on_release: app.root.current = "main"
+            pos_hint: {'center_x': 0.95,'center_y': 0.1}
+            ImgButton:
+                id: 'menu_img'
+                source: 'media/icons/menu.png'
+
+        Button:
+            id: 'close'
+            on_release: 
+            pos_hint: {'center_x': 0.05,'center_y': 0.9}
+            ImgButton:
+                id: 'close_img'
+                source: 'media/icons/close.png'
+
+<OptionsScreen>
+    name: "options"
+    FloatLayout:
+
+        Image:
+            source: 'media/background/background_main.png'
+            size: 1920,1080
+            allow_stretch: True
+            keep_ratio: False
+            
+        Image:
+            source: 'media/background/options.png'
+            size: 774,88
+              
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5,'center_y': 0.9}
+
+        Button:
+            on_release: app.root.current = "main"
+            pos_hint: {'center_x': 0.15,'center_y': 0.08}
+            ImgButton:
+                id: 'back_img'
+                source: 'media/buttons/back.png'
+                
+
+
+<SavegameScreen>
+    name: "savegame"
+    FloatLayout:
+
+        Image:
+            source: 'media/background/background_main.png'
+            size: 1920,1080
+            allow_stretch: True
+            keep_ratio: False
+
+        Image:
+            source: 'media/background/savestate.png'
+            size: 774,88
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5,'center_y': 0.9}
+
+        Button:
+            on_release: app.root.current = "main"
+            pos_hint: {'center_x': 0.15,'center_y': 0.08}
+            ImgButton:
+                id: 'back_img'
+                source: 'media/buttons/back.png'
+
+<LoadgameScreen>
+    name: "loadgame"
+    FloatLayout:
+
+        Image:
+            source: 'media/background/background_main.png'
+            size: 1920,1080
+            allow_stretch: True
+            keep_ratio: False
+
+        Image:
+            source: 'media/background/loadstate.png'
+            size: 774,88
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5,'center_y': 0.9}        
+
+        Button:
+            on_release: app.root.current = "main"
+            pos_hint: {'center_x': 0.15,'center_y': 0.08}
+            ImgButton:
+                id: 'back_img'
+                source: 'media/buttons/back.png'
+              
+           
+<CreditsScreen>
+    name: "credits"
+    FloatLayout:
+
+        Image:
+            source: 'media/background/background_main.png'
+            size: 1920,1080
+            allow_stretch: True
+            keep_ratio: False
+            Image:
+                source: 'media/background/credits.png'
+                size: 774,88              
+                size_hint: None, None
+                pos_hint: {'center_x': 0.5,'center_y': 0.9}
+
+            Label:                
+                text: "im the stupid example text"
+                pos: self.parent.center_x, self.parent.center_y
+                halign: 'center'
+                valign: 'center'
+
+        Button:
+            on_release: app.root.current = "main"
+            pos_hint: {'center_x': 0.15,'center_y': 0.08}
+            ImgButton:
+                id: 'back_img'
+                source: 'media/buttons/back.png'
+
