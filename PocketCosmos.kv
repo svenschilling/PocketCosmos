@@ -169,6 +169,13 @@ WindowManager:
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
+            
+        Image:
+            source: 'media/background/options.png'
+            size: 774,88
+              
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5,'center_y': 0.9}
 
         Button:
             on_release: app.root.current = "main"
@@ -188,12 +195,12 @@ WindowManager:
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
-            Image:
-                source: 'media/background/savestate.png'
-                size: 774,88
 
-                size_hint: None, None
-                pos_hint: {'center_x': 0.5,'center_y': 0.9}
+        Image:
+            source: 'media/background/savestate.png'
+            size: 774,88
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5,'center_y': 0.9}
 
         Button:
             on_release: app.root.current = "main"
@@ -211,12 +218,12 @@ WindowManager:
             size: 1920,1080
             allow_stretch: True
             keep_ratio: False
-            Image:
-                source: 'media/background/loadstate.png'
-                size: 774,88
 
-                size_hint: None, None
-                pos_hint: {'center_x': 0.5,'center_y': 0.9}
+        Image:
+            source: 'media/background/loadstate.png'
+            size: 774,88
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5,'center_y': 0.9}        
 
         Button:
             on_release: app.root.current = "main"
@@ -237,14 +244,11 @@ WindowManager:
             keep_ratio: False
             Image:
                 source: 'media/background/credits.png'
-                size: 774,88
-                allow_stretch: True
-                keep_ratio: False
+                size: 774,88              
                 size_hint: None, None
                 pos_hint: {'center_x': 0.5,'center_y': 0.9}
 
-            Label:
-                
+            Label:                
                 text: "im the stupid example text"
                 pos: self.parent.center_x, self.parent.center_y
                 halign: 'center'
