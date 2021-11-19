@@ -30,14 +30,18 @@ class MainScreen(Screen):
     
 
 class PlayScreen(Screen):
-    def leftHandMode():
-        kv = Builder.load_file('leftHanded.kv')
+    def toggleMode():
+        def leftHandMode():
+            kv = Builder.load_file('leftHanded.kv')
 
         pass
-    def rightHandMode():
-        kv = Builder.load_file('rightHanded.kv')
+        def rightHandMode():
+            kv = Builder.load_file('rightHanded.kv')
 
         pass
+    pass
+    
+    
     def toggleSound():
         snd = SoundLoader.load('media/sound/music/Beta1.ogg')
         snd.loop = True
