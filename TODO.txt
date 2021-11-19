@@ -13,4 +13,4 @@
 - x button hold for 3 sec asks for quitting the game when not in main menu , single lick goes one back
 - make hints for buttons !
 # save/load state
-- img position isnt taking x,y psoitioning
+- img position isnt taking x,y positioning
