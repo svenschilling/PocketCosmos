@@ -21,33 +21,36 @@ class WindowManager(ScreenManager):
     pass
 
 class MainScreen(Screen):
-    # change image according to its state || can i have dynamic id ?
-    def play_on(self, instance):
-        #self.ids.play_img.source = ''
-        WindowManager.current = "play"
-    def play_off(self, instance):
+
+    
+
+    
+    def play_pressed(self, instance):
         self.ids.play_img.source = 'media/buttons/play_pressed.png'
-    
 
-class PlayScreen(Screen):
-    def toggleMode():
-        def leftHandMode():
-            kv = Builder.load_file('leftHanded.kv')
-
+    def toggleImage(self, instance):
         pass
-        def rightHandMode():
-            kv = Builder.load_file('rightHanded.kv')
 
-        pass
-    pass
-    
-    
-    def toggleSound():
+    def toggleSound(self, instance):
+        self.toggleS = sound
         snd = SoundLoader.load('media/sound/music/Beta1.ogg')
         snd.loop = True
         snd.play()
         pass
-    
+
+   
+
+    def toggleHandMode(self):
+        
+        def leftHandMode():
+            kv = Builder.load_file('leftHanded.kv')
+            pass
+        def rightHandMode():
+            kv = Builder.load_file('rightHanded.kv')
+            pass
+        pass
+
+class PlayScreen(Screen):    
     pass
 
 class OptionsScreen(Screen):
