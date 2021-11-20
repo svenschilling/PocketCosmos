@@ -40,7 +40,12 @@ WindowManager:
         Button:
             id: 'play_btn'
             pos_hint: {'center_x': 0.15,'center_y': 0.08}
-            on_release: app.root.current = "play"            
+            on_release: app.root.current = "play"          
+            
+            on_press: 
+                root.toggleSound()
+                
+            
             ImgButton:
                 id: 'play_img'
                 source: 'media/buttons/play.png'
@@ -92,6 +97,9 @@ WindowManager:
             id: 'add_planet'
             on_release: 
             pos_hint: {'center_x': 0.05,'center_y': 0.9}
+
+          
+
             ImgButton:
                 id: 'add_planet_img'
                 source: 'media/icons/add_planet.png'
