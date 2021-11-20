@@ -32,7 +32,7 @@ class MainScreen(Screen):
         pass
 
     def toggleSound(self, instance):
-        self.toggleS = sound
+        self.toggleS = sound                                        
         snd = SoundLoader.load('media/sound/music/Beta1.ogg')
         snd.loop = True
         snd.play()
