@@ -1,4 +1,3 @@
-#           POCKETCOSMOS
 import kivy
 from kivy import config
 kivy.require('2.0.0')
@@ -16,15 +15,13 @@ from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 
 config.window_icon = 'media/icons/main.png'
 
+
 # define screens
 class WindowManager(ScreenManager):
     pass
 
 class MainScreen(Screen):
-
-    
-
-    
+  
     def play_pressed(self, instance):
         self.ids.play_img.source = 'media/buttons/play_pressed.png'
 
@@ -32,24 +29,19 @@ class MainScreen(Screen):
         pass
 
     def toggleSound(self, instance):
-        self.toggleS = sound                                        
+                                           
         snd = SoundLoader.load('media/sound/music/Beta1.ogg')
         snd.loop = True
         snd.play()
         pass
 
-   
-
     def toggleHandMode(self):
+        self.toggle = 0
+        if self.toggle ==  1:
+            Builder.load_file('leftHanded.kv')
+        else:    
+            Builder.load_file('rightHanded.kv')
         
-        def leftHandMode():
-            kv = Builder.load_file('leftHanded.kv')
-            pass
-        def rightHandMode():
-            kv = Builder.load_file('rightHanded.kv')
-            pass
-        pass
-
 class PlayScreen(Screen):    
     pass
 

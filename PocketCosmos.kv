@@ -41,11 +41,7 @@ WindowManager:
             id: 'play_btn'
             pos_hint: {'center_x': 0.15,'center_y': 0.08}
             on_release: app.root.current = "play"          
-            
-            on_press: 
-                root.toggleSound()
-                
-            
+            # on_press: app.root.toggleSound()
             ImgButton:
                 id: 'play_img'
                 source: 'media/buttons/play.png'
